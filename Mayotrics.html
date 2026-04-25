@@ -1,0 +1,315 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="CONTENT-TYPE" content="text/html; charset=UTF-8" width="device-width">
+<title>login/mayotrics</title>
+<link href="mayotrics.css" type="text/css" rel="stylesheet"/>
+</head>
+
+<body>
+<script src="mayotrics.js"></script>
+<div id="navigation-bar">
+<h1 id="mayotrics-logo">M</h1>
+<button id="show-profile">profile</button>
+<button id="mayotrics-setting">settings</button>
+<button id="mayotrics-notification">notifications</button>
+<button id="mayotrics-message">messages</button>
+<button id="mayotrics-payement">billing</button>
+<button id="mayotrics-support">support</button>
+</div>
+<div id="in-page-alerts"></div>
+
+<div id="home-div">
+<div class="mayotrics-home">
+<div class="adds">
+<div class="logged-user"></div>
+
+<div class="date-div">
+<p id="time-for-now"></p>
+<p id="date-for-today"></p>
+<input type="range" id="year-progress-bar" value=10 min=1 max=12 interval=1/>
+<p id="this-day"></p>
+</div>
+
+<div id="general-notification"></div>
+<div class="reminder">
+<p>Tasks</p>
+<img src="mayotrics.jpg" alt="task scheduler" width="300px" height="200px" id="switch-task-space"/>
+</div>
+
+
+<button class="sign-in-sign-up">Login to softknight</button>
+</div>
+</div>
+
+<div class="signed-profiles">
+
+<div class="listed-profiles">
+<p>Select a profile to log in</p>
+</div>
+
+<div class="login-register">
+<button id="home-to-login">login</button>
+<button id="home-to-registration">register</button>
+</div>
+
+<div class="can-not-see-my-account">
+<button class="new-account">Can't see my account</button>
+</div>
+
+</div>
+<!--Start of signing up and signing in forms--->
+
+<div class="account-forms">
+<div id="registration-page">
+<button id="go-to-home-page">Home</button>
+<form>
+<p class="greetings">Welcome back</p>
+<div id="registration-names">
+<div id="first-name-field">
+<label for="Names">First Name</label>
+<input type="text" id="first-name"/>
+</div>
+
+<div id="last-name-field">
+<label for="last-name">Last Name</label>
+<input type="text" id="last-name"/>
+</div>
+</div> 
+<label for="Username">Username</label> 
+<input type="text" id="sername"/></br>
+<label for="password">Password</label> 
+<input type="password" id="pass"/></br>
+<label for="confirmPass">Confirm</label>  
+<input type="password" id="confirmPass"/>
+<label for="check">
+<input type="checkbox" id="check"/>
+<p id="terms-link">I agree to softknight's <a href="terms.html" id="ref">terms and privacy policy</a></p>
+</label> 
+
+<input type="button" id="reg" value="Register" disabled="true"/> 
+</form>
+<div id="other-buttons">
+<input type="button" id="go-to-login" value="Login"/> 
+</div>
+</div>
+
+<div id="login-page">
+<button id="home-page-from-login">Home</button>
+<form>
+<p class="greetings">Welcome back</p>
+<label for="Username">Username</label> 
+<input type="text" id="username"/>
+<label for="password">Password</label> 
+<input type="password" id="password"/></br>
+<input type="button" id="login" value="Login" disabled="false"/> 
+
+</form>
+<div id="other-non-login-buttons">
+<input type="button" id="go-to-registration" value="Register"/> 
+<input type="button" id="forgot-login-password" value="Forgot password"/> 
+</div>
+</div>
+</div>
+
+<!--End of signing up and signing in forms--->
+
+
+<!--Start of profile data fields--->
+<div class="show-profile">
+<button id="edit-profile">Edit Profile</button>
+<div class="profile-username"></div>
+<div class="user-name"></div>
+<img src="mayotrics.jpg" width="70px" height="70px" alt="Mayotrics logo"/>
+<div class="goals"></div>
+<div class="user-name"></div>
+<div class="date-joined"></div>
+<div class="location-field"></div>
+<div class="device-location"></div>
+<div class="links"></div>
+<div class="emails"></div>
+<div class="home-items"></div>
+<input type="button" id="log-out" value="log out"/> 
+</div>
+
+<!--Start editting profile tiles--->
+<div class="edit-profile-details">
+<button id="previous-item">back</button>
+<div class="add-goal">
+<input type="text" id="add-goal" placeholder="Enter your goal"/>
+<textarea id="add-goal-description" placeholder="Enter your goal description"></textarea>
+<button id="save-goal">save</button>
+</div>
+
+<div class="add-location">
+<input type="text" id="added-location" placeholder="Enter your location"/>
+<input type="button" id="add-update-location" value="add"/> 
+</div>
+<div class="add-link">
+<div id="enclose-linktables">
+<input type="text" id="input-link" placeholder="Enter your link"/>
+<input type="button" id="add-update-link" value="add"/> 
+<table id="link-CRUD">
+<tbody class="links-table-body"></tbody>
+</table>
+</div>
+</div>
+
+<div class="edit-email">
+<input type="email" id="add-email" placeholder="e.g. lmn@gmail.com"/>
+<input type="button" id="add-update-email" value="add"/> 
+</div>
+
+<div class="add-home-items">
+<!--create a buttons list--->
+<p class="greetings">Not available</p>
+<input type="button" id="add-update-home" value="add"/> 
+</div>
+
+<input type="button" id="skip-profile-field" value="skip"/> 
+<input type="button" id="quit-profile-edit" value="Quit"/> 
+</div>
+<!--End editting profile tiles--->
+
+
+<div id="profile">
+<h3>Profile</h3>
+<div class="goal-div">
+<button id="switch-goal-ops">edit</button>
+<div class="add-goal">
+<input type="text" id="add-goal" placeholder="Enter your goal"/>
+<button id="save-goal">save</button>
+</div>
+<div class="edit-goal">
+<input type="text" id="edit-goal"/>
+<button id="save-editted-goal">save</button>
+</div>
+
+<div class="add-link">
+<input type="text" id="add-link" placeholder="Enter your link"/>
+<button id="add-link">add</button>
+</div>
+</div>
+
+
+
+<div class="location-div">
+<button id="switch-location-ops">edit</button>
+<div class="add-location">
+<input type="text" id="added-location" placeholder="Enter your location"/>
+<button id="save-added-location">save</button>
+</div>
+<div class="edit-location">
+<input type="text" id="new-location"/>
+<button id="save-new-location">save</button>
+</div>
+
+</div>
+<div class="links-div">
+<button id="switch-link-ops">edit</button>
+
+<div class="add-link">
+<input type="text" id="add-link" placeholder="Enter your link"/>
+<button id="add-link">add</button>
+</div>
+<div class="edit-link">
+<input type="text" id="edit-link"/>
+<button id="edit-link">save</button>
+</div>
+</div>
+
+<div class="emails-div">
+<button id="switch-email-ops">change</button>
+<div class="edit-email">
+<input type="email" id="new-email"/>
+<button id="edit-email">save</button>
+</div>
+</div>
+<div class="linked-accounts"></div>
+
+<div class="customize-home-div">
+<button id="switch-home">edit home</button>
+<div class="add-home-items">
+<!--create a buttons list--->
+</div>
+<div class="edit-home-items">
+<!--create a buttons list--->
+</div>
+</div>
+<div class="account-logs"></div>
+<div class="messages"></div>
+<!--End of profile display--->
+</div>
+
+<div class="user-tasks">
+
+<div class="add-task">
+<p>Adding more tasks</p>
+<div class="task-year">
+<p>Year</p>
+<input type="number" id="task-year" placeholder="e.g 2025"/>
+</div>
+<div class="task-month">
+<p>Month</p>
+<input type="number" id="task-month"/>
+</div>
+<div class="task-date">
+<p>date</p>
+<input type="number" id="task-date"/>
+</div>
+<div class="task-hour">
+<p>Hour</p>
+<input type="number" id="task-hour"/>
+</div>
+<div class="task-minutes">
+<p>MInutes</p>
+<input type="number" id="task-minutes"/>
+</div>
+<div class="task-title">
+<p>Title</p>
+<input type="text" id="task-title"/>
+</div>
+<div class="task-people">
+<p>People</p>
+<input type="text" id="task-people"/>
+</div>
+<div class="task-description">
+<p>Description</p>
+<input type="text" id="task-description"/>
+</div>
+<div class="task-data">
+<p>Task data</p>
+<button type="submit" id="task-data">Add tabulated data<button>
+</div>
+<div class="task-ends">
+<p>Task ends on</p>
+<input type="text" id="task-ends"/>
+</div>
+<button type="submit" id="save-task">save<button>
+</div>
+
+<div class="view-task">
+<p>My tasks</p>
+</div>
+
+</div>
+ 
+</body>
+
+<footer>
+<div class="social">
+</div>
+
+<div class="other-products">
+<p>Also from softknight inc</p>
+<p>Dictionary</p>
+<p>Gaming community</p>
+<p>canvas</p>
+</div>
+<div class="copy">
+<p>softknight team</p>
+<p>All rights reserved, softknight &copy;2025</p>
+</div>
+
+</footer>
+</html>
